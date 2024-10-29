@@ -6,13 +6,13 @@
 #    By: chon <chon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 17:22:35 by chon              #+#    #+#              #
-#    Updated: 2024/10/28 17:25:56 by chon             ###   ########.fr        #
+#    Updated: 2024/10/29 18:11:09 by chon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = brainz
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 

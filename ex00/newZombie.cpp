@@ -6,7 +6,13 @@
 /*   By: chon <chon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:22:31 by chon              #+#    #+#             */
-/*   Updated: 2024/10/28 17:22:32 by chon             ###   ########.fr       */
+/*   Updated: 2024/10/29 18:07:52 by chon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie*	newZombie(std::string name) {
+	Zombie	*zombie = new Zombie(name);
+	return zombie;	
+}

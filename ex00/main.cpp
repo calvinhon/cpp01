@@ -6,13 +6,15 @@
 /*   By: chon <chon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:22:33 by chon              #+#    #+#             */
-/*   Updated: 2024/10/28 17:27:12 by chon             ###   ########.fr       */
+/*   Updated: 2024/10/29 18:13:58 by chon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int	main(void) {
-	
+	Zombie	*z1 = newZombie("Charles");
+	randomChump("Rando");
+	delete z1;
 	return 0;
 }
