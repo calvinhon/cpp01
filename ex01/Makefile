@@ -1,6 +1,6 @@
 NAME = moarbrainz
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 

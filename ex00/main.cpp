@@ -13,8 +13,18 @@
 #include "Zombie.hpp"
 
 int	main(void) {
-	Zombie	*z1 = newZombie("Charles");
-	randomChump("Rando");
+	
+    std::cout << "============= Zombies on the Heap =============" << std::endl;
+    Zombie	*z1 = newZombie("Charles");
+    z1->announce();
 	delete z1;
-	return 0;
+    Zombie	*z2 = newZombie("Charlotte");
+	z2->announce();
+    delete z2;
+
+    std::cout << "============= Zombies on the Stack =============" << std::endl;
+    randomChump("Rando");
+    randomChump("Total Rando");
+
+    return 0;
 }
