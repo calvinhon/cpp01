@@ -12,13 +12,16 @@ enum    logLevel {
 };
 
 public:
-    void    complain(std::string level);
+	Harl();
+    void    		complain(std::string level);
+	typedef void	*function_p() const;
 
 private:
-    void    debug(void);
+	std::map<std::string, function_p> levelMap;
+    
+	void    debug(void);
     void    info(void);
     void    warning(void);
     void    error(void);
-    void    invalid(void);
 
 };
