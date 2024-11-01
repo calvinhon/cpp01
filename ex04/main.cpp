@@ -31,7 +31,7 @@ int main(int ac, char** av) {
         return 1;
     }
     if (std::string(av[2]).empty()) {
-        std::cerr << "Error opening output file" << std::endl;
+        std::cerr << "String to delete must not be empty" << std::endl;
         return 1;
     }
     std::string line;
