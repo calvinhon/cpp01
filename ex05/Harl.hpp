@@ -4,13 +4,6 @@
 
 class   Harl {
 
-enum    logLevel {
-    DEBUG,
-    INFO,
-    WARNING,
-    ERROR
-};
-
 public:
 	Harl();
     void    		complain(std::string level);
