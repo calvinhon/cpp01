@@ -14,7 +14,7 @@ enum    logLevel {
 public:
 	Harl();
     void    		complain(std::string level);
-	typedef void	*function_p() const;
+	typedef void	(Harl::*function_p)();
 
 private:
 	std::map<std::string, function_p> levelMap;
