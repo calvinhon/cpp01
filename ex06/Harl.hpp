@@ -20,10 +20,10 @@ public:
 private:
     std::map<std::string, function_p> levelMap;
 
-	void    debug(void);
-    void    info(void);
-    void    warning(void);
-    void    error(void);
+	void    _debug(void);
+    void    _info(void);
+    void    _warning(void);
+    void    _error(void);
 
 };
 
