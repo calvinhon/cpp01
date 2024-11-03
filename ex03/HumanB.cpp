@@ -3,7 +3,7 @@
 
 HumanB::HumanB(std::string name):
     _name(name),
-    _weapon(nullptr) {
+    _weapon(NULL) {
 }
 
 void    HumanB::attack() {
@@ -13,6 +13,6 @@ void    HumanB::attack() {
         std::cout << _name << " is unarmed!!!" << std::endl;
 }
 
-void    HumanB::setWeapon(Weapon weapon) {
+void    HumanB::setWeapon(Weapon& weapon) {
     _weapon = &weapon;
 }

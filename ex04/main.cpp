@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-void    copy(std::ofstream& outFile, std::string line, std::string s1, std::string s2) {
+void    replace(std::ofstream& outFile, std::string line, std::string s1, std::string s2) {
     size_t  position = 0;
     size_t  lastPos = 0;
     size_t  len = s1.length();
@@ -25,7 +25,8 @@ int main(int ac, char** av) {
         std::cerr << "Error opening input file" << std::endl;
         return 1;
     }
-    std::ofstream outFile(std::string(av[1]) + ".replace");
+	std::string outputFile = std::string(av[1]) + ".replace";
+    std::ofstream outFile(outputFile.c_str());
     if (!outFile) {
         std::cerr << "Error opening output file" << std::endl;
         return 1;
@@ -35,8 +36,11 @@ int main(int ac, char** av) {
         return 1;
     }
     std::string line;
-    while (std::getline(inFile, line))
-        copy(outFile, line, av[2], av[3]);            
+    while (std::getline(inFile, line)) {
+		if (!inFile.eof())
+			line += '\n';
+        replace(outFile, line, av[2], av[3]);            
+	}
     inFile.close();
     outFile.close();
     return 0;

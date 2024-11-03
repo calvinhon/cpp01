@@ -10,10 +10,13 @@ int main(int ac, char **av) {
     switch (harl.get_level(av[1])) {
         case DEBUG:
             harl.complain("DEBUG");
+			// fall through
         case INFO:
             harl.complain("INFO");
+			// fall through
         case WARNING:
             harl.complain("WARNING");
+			// fall through
         case ERROR:
             harl.complain ("ERROR");
             break;

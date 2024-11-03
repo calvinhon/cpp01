@@ -6,18 +6,18 @@
 #    By: chon <chon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 17:22:35 by chon              #+#    #+#              #
-#    Updated: 2024/10/29 18:11:09 by chon             ###   ########.fr        #
+#    Updated: 2024/11/03 17:10:31 by chon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = brainz
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
