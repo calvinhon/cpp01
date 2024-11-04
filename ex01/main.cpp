@@ -1,7 +1,7 @@
 #include "Zombie.hpp"
 
 int main(void) {
-    int N = 3;
+    int N = 2;
 
     std::cout << "============= Zombies on the Heap =============" << std::endl;
     Zombie* horde1 = zombieHorde(N, "Infantry");
